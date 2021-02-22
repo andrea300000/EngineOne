@@ -1,0 +1,53 @@
+﻿
+@model PictureDetails
+
+
+@{
+    ViewData["Title"] = "PhotoDetails";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Image Details</h2>
+        </div>
+        <div class="col-6 text-right">
+
+            <p>Author : @Model.author  </p>
+        </div>
+
+    </div>
+
+    <br /><br />
+
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Hashtags
+                    </th>
+                    <th>
+                        Image
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+ 
+                    <tr>
+
+                        <td width="30%">
+                            @Model.tags
+                        </td>
+                        <td width="70%">
+                            <img src="@Html.Raw(Model.cropped_picture)" alt="image preview">
+
+
+                        </td>
+
+                    </tr>
+                
+            </tbody>
+        </table>
+</div>
+
+
